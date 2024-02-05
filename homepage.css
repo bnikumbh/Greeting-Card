@@ -1,0 +1,178 @@
+/* .Hero-Banner {
+ 
+    margin-top: 0;
+   
+  }
+  body {
+    font-family: verdana;
+    background-color: black;
+  }
+  
+  canvas {
+    margin-top: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-size: no-repeat center ;
+    cursor: pointer;
+    position: absolute;
+    z-index: -1;
+    
+  }
+  
+  .Banner-Headline {
+    z-index: 1;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    color: gold;
+    font-family: "Source Sans Pro";
+    font-size: 5em;
+    font-weight: 900;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  .button {
+    z-index: 2;
+    color: white;
+    text-decoration: none;
+    margin-top: 30%;
+    margin-left: 45%;
+    cursor: pointer;
+    background: #FF4742;
+  border: 1px solid white;
+  border-radius: 6px;
+  box-shadow: yellow;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 25px 60px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: uppercase;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  }
+
+
+.button:hover,
+.button:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.button:active {
+  opacity: .5;
+} */
+
+
+/* For Responsive  */
+.Hero-Banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+body {
+  font-family: verdana;
+  background-color: black;
+}
+
+canvas {
+  margin-top: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-size: no-repeat center;
+  cursor: pointer;
+  position: absolute;
+  z-index: -1;
+}
+
+.Banner-Headline {
+  text-transform: uppercase;
+  color: gold;
+  font-family: "Source Sans Pro";
+  font-size: 5em;
+  font-weight: 900;
+  -webkit-user-select: none;
+  user-select: none;
+  text-align: center;
+}
+
+.button {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  background: #FF4742;
+  border: 1px solid white;
+  border-radius: 6px;
+  box-shadow: yellow;
+  box-sizing: border-box;
+  font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 25px 60px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: uppercase;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 20px; /* Adding some margin between headline and button */
+}
+
+.button:hover,
+.button:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.button:active {
+  opacity: .5;
+}
+
+/* Media Queries for Responsive Design */
+
+@media screen and (max-width: 768px) {
+  .Banner-Headline {
+      font-size: 3em;
+  }
+
+  .button {
+      font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Banner-Headline {
+      font-size: 2em;
+  }
+
+  .button {
+      font-size: 12px;
+  }
+}

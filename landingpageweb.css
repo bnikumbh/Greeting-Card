@@ -1,0 +1,280 @@
+* {
+
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #FFF0F5;
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.text {
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.card {
+    padding-top: 40px;
+    margin-left: 900px;
+    margin-top: 40px;
+    object-fit: cover;
+    width: 640px;
+    height: 400px;
+    position: absolute;
+    border: 2px white;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    transition: 1s;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 35px;
+    font-family: verdana;
+    color: red;
+    font-size: 52px;
+    padding-left: 240px;
+    padding-right: 240px;
+}
+
+
+.card:hover {
+    transform: rotate(-5deg);
+}
+
+.card:hover .outside {
+    transform: rotateY(-130deg);
+}
+
+.outside,
+.inside {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    left: 50.1%;
+
+}
+
+.inside {
+    background: linear-gradient(to right, #7A2048, #7A2048 15%);
+    line-height: 3;
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    left: 80%;
+}
+
+.outside {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    z-index: 1;
+    transform-origin: left;
+    transition: 2s;
+    cursor: pointer;
+    background: linear-gradient(to right, #7A2048, #7A2048 15%);
+    line-height: 1;
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    left: 80%;
+
+    color: aliceblue;
+    font-weight: 700;
+    font-size: 2 rem;
+}
+
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+
+}
+
+.front {
+    background-color: #7A2048;
+}
+
+.back {
+
+    transform: rotateY(180deg);
+    background: linear-gradient(to left, #7A2048, #7A2048 10%);
+}
+
+.back>P {
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+}
+
+.cake {
+    width: 100%;
+    position: fixed;
+    bottom: 30px;
+}
+
+.top-layer,
+.middle-layer,
+.bottom-layer {
+    height: 80px;
+    width: 240px;
+    background-repeat: repeat;
+    background-size: 60px 100px;
+    background-position: 28px 0;
+    background-image: linear-gradient(transparent 50px,
+            #fedbab 50px,
+            #fedbab 60px,
+            transparent 60px),
+        radial-gradient(circle at 30px 5px, #994c10 30px, #fcbf29 31px);
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    margin: auto;
+}
+
+.middle-layer {
+    transform: scale(0.85);
+    top: 6px;
+}
+
+.top-layer {
+    transform: scale(0.7);
+    top: 26px;
+}
+
+.candle {
+    height: 45px;
+    width: 15px;
+    background: repeating-linear-gradient(45deg,
+            #fd3018 0,
+            #fd3018 5px,
+            #ffa89e 5px,
+            #ffa89e 10px);
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 202px;
+}
+
+.candle:before {
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    background-color: #ffa500;
+    border-radius: 0 50% 50% 50%;
+    bottom: 48px;
+    transform: rotate(45deg);
+    left: -1px;
+}
+
+.outside p {
+    font-size: 23px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    text-align: center;
+    letter-spacing: 1px;
+
+}
+
+.inside p {
+    color: white;
+    line-height: 2;
+}
+
+
+h1 {
+    margin-top: 150px;
+    margin-left: 49px;
+    font-size: 150px;
+    position: absolute;
+}
+
+.ballonGIF {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 450px;
+
+}
+
+/* Ballon CSS */
+
+body {
+    margin: 0;
+}
+
+#balloon-container {
+    height: 100vh;
+    padding: 1em;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    transition: opacity 500ms;
+}
+
+.balloon {
+    height: 125px;
+    width: 105px;
+    border-radius: 75% 75% 70% 70%;
+    position: relative;
+}
+
+.balloon:before {
+    content: "";
+    height: 75px;
+    width: 1px;
+    padding: 1px;
+    background-color: #FDFD96;
+    display: block;
+    position: absolute;
+    top: 125px;
+
+    margin: auto;
+}
+
+.balloon:after {
+    content: "▲";
+    text-align: center;
+    display: block;
+    position: absolute;
+    color: inherit;
+    top: 120px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-300vh);
+        opacity: 0;
+    }
+}
